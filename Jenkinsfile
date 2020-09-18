@@ -4,7 +4,7 @@ pipeline{
       stages{
       
             stage('STAGE 1'){
-                    agent { label1 'c-on-slave1'  }
+                    agent { label 'c-on-slave1'  }
                     
                     steps{
                     sh 'sleep 10'
@@ -12,7 +12,7 @@ pipeline{
             }
             
             stage( 'STAGE 2'){
-                     agent { label1 'java-on-slave' }
+                     agent { label 'java-on-slave' }
                      steps{
                      sh 'sleep 10'
                      }
@@ -20,21 +20,21 @@ pipeline{
             
             
             stage( 'STAGE 3'){
-                  agent { label1 'master' }
+                  agent { label 'master' }
                   steps{
                   sh 'sleep 10'
                   }
             }            
             
              stage( 'STAGE 4' ){
-                   agent { label1 'c-project-build' }
+                   agent { label 'c-project-build' }
                     steps{
                     sh 'sleep 10'
                         }
                   }
                   
                   stage( 'STAGE 5' ){
-                        agent { label1 'c-on-slave2' }
+                        agent { label 'c-on-slave2' }
                         steps{
                               sh 'sleep 10'
                         }
