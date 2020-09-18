@@ -12,10 +12,8 @@ stages {
                     sh 'pwd'
                     sh 'git clone https://github.com/bhanurekha09/csource.git'
                     sh 'pwd'
-                    sh 'cd /home/ec2-user/jenkins/workspace/pipeline-18-20/csource'
                     sh 'echo "executing on jenkin-slave" '
                     sh 'ls'
-              
                     sh 'cd csource'
                     sh 'ls'
                     sh 'make'
