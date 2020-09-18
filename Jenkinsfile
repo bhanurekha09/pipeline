@@ -3,13 +3,13 @@ pipeline{
       
       stages{
       
-            stage('STAGE 1'){
+            stage( 'STAGE 1'){
                     steps{
                     sh 'sleep 60'
                     }
             }
             
-            stage( STAGE 2'){
+            stage( 'STAGE 2'){
                  steps{
                  sh 'sleep 60'
                  }
