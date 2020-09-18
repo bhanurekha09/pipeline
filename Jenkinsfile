@@ -9,10 +9,12 @@ stages {
               steps{
                    echo "executing makefile"
                    sh 'sleep 10'
-                   sh 'git clone https://github.com/bhanurekha09/csource.git'
-                   sh 'cd /home/ec2-user/jenkins/workspace/pipeline-18-20/csource'
+                    pwd
+                    sh 'git clone https://github.com/bhanurekha09/csource.git'
+                    sh 'cd /home/ec2-user/jenkins/workspace/pipeline-18-20/csource'
                     sh 'echo "executing on jenkin-slave" '
                     sh 'ls'
+                    sh 
                     sh 'cd csource'
                     sh 'ls'
                     sh 'make'
