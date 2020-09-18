@@ -8,7 +8,7 @@ stages {
               agent{ label 'master' }
               tools { 
                     jdk 'JDK 9.0.d' 
-                    maven 'Maven 3.6.3' 
+                    
                  
     }
               
