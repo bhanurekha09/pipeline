@@ -8,7 +8,7 @@ stages {
               agent{ label 'jenkin-slave1' }
               steps{
                    echo "executing makefile"
-                   sh 'sleep 10'
+                  
                     sh 'pwd'
                     sh 'git clone https://github.com/bhanurekha09/csource.git'
                     sh 'pwd'
