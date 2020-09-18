@@ -14,6 +14,7 @@ stages {
                     sh 'echo "executing on jenkin-slave" '
                     sh 'ls'
                     sh 'cd csource'
+                    sh 'ls'
                     sh 'make'
                     sh 'rm -rf csource'
                    }    
