@@ -7,8 +7,8 @@ stages {
         stage ( 'Build for j-source' ){
               agent{ label 'master' }
               tools { 
-                 maven 'Maven 3.6.3' 
-                 jdk 'jdk8' 
+                 maven 'maven3.6.3' 
+                 jdk 'JDK 9.0.d' 
     }
               
               steps{
