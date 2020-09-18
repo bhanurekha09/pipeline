@@ -10,7 +10,7 @@ stages {
                    echo "executing makefile"
                   
                     sh 'pwd'
-                    sh 'https://github.com/bhanurekha09/java.git'
+                    sh 'git clone https://github.com/bhanurekha09/java.git'
                     sh 'pwd'
                     sh 'echo "executing on jenkin-slave" '
                     sh 'ls'
