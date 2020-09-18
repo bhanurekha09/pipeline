@@ -34,7 +34,7 @@ pipeline{
                   }
                   
                   stage( 'STAGE 5' ){
-                        agent { label 'c-on-slave2' }
+                        agent { label 'jenkin-slave2' }
                         steps{
                               sh 'sleep 10'
                         }
