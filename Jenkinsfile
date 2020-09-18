@@ -12,6 +12,9 @@ stages {
                    sh 'git clone https://github.com/bhanurekha09/csource.git'
                    cd /var/lib/jenkins/workspace/c-project-build
                    make
-          }    
-}         
-}      
+                   }    
+         }         
+}   
+      
+      
+}
