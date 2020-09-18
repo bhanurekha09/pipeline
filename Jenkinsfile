@@ -2,28 +2,51 @@ pipeline{
 
 agent none
 
-stages {
-      
-        stage ( 'Build for j-source' ){
-              agent{ label 'master' }
-              tools { 
-                    jdk 'JDK 9.0.d' 
-                    
-                 
-    }
-              
-              steps{
-                   echo "executing makefile"
+      stages { 
+            parallel {
+                  stage( 'STAGE 1' ) {
+            
+                  agent { label 'jenkin-slave1' }
+                  steps {
+                         sh 'sleep 10'
+                         }
+                  }
+            
+            
+                  stage ( 'STAGE 2' ) {
+                        
+                        agent { label 'jenkin-slave2' }
+                        steps {
+                              sh 'sleep 10'
+                        }
+                        
+                  }
                   
-                    sh 'pwd'
-                    sh 'git clone https://github.com/bhanurekha09/java.git'
-                    sh 'pwd'
-                    sh 'echo "executing on jenkin-slave" '
-                    sh 'ls'
-                    sh 'mvn clean install'
-         }         
-}   
+            }
+            
+            parallel {
+                  stage( 'STAGE 3' ){
+                        agent { label 'master' }
+                        steps {
+                              sh 'sleep 10'
+                        }          
+                  }
+                  
+                  
+                  stage( 'STAGE 4'){
+                        agent { label 'jenkin-slave1' }
+                        steps {
+                              sh 'sleep 10'
+                        }
+                  }
+            }
+      }
+}
+                        
+                        
+                        
       
       
-}
-}
+                          
+                    
+                  
