@@ -14,7 +14,7 @@ stages {
                     sh 'pwd'
                     sh 'echo "executing on jenkin-slave" '
                     sh 'ls'
-                    sh 'cd  -R /home/ec2-user/jenkins/workspace/pipeline-18-20 /home/ec2-user/jenkins/workspace/pipeline-18-20/csource'
+                    sh 'cd  csource'
                      sh 'pwd'
                     sh 'ls'
                     sh 'make'
