@@ -11,7 +11,8 @@ stages {
                    sh 'sleep 10'
                    sh 'git clone https://github.com/bhanurekha09/csource.git'
                    sh 'cd /home/ec2-user/jenkins/workspace/pipeline-18-20/csource'
-                    sh 'echo "executing" '
+                    sh 'echo "executing on jenkin-slave" '
+                    sh 'ls'
                     sh 'make'
                     sh 'rm -rf csource'
                    }    
