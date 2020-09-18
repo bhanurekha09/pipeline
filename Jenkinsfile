@@ -12,6 +12,7 @@ stages {
                    sh 'git clone https://github.com/bhanurekha09/csource.git'
                    
                    sh 'make'
+                    sh 'rm -rf csource'
                    }    
          }         
 }   
