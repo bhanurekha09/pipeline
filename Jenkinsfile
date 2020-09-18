@@ -4,7 +4,7 @@ pipeline{
       stages{
       
             stage('STAGE 1'){
-                    agent { label 'c-on-slave1'  }
+                    agent { label 'master  }
                     
                     steps{
                     sh 'sleep 10'
@@ -12,7 +12,7 @@ pipeline{
             }
             
             stage( 'STAGE 2'){
-                     agent { label 'java-on-slave' }
+                     agent { label 'jenkin-slave1' }
                      steps{
                      sh 'sleep 10'
                      }
@@ -20,14 +20,14 @@ pipeline{
             
             
             stage( 'STAGE 3'){
-                  agent { label 'master' }
+                  agent { label 'jenkin-slave2' }
                   steps{
                   sh 'sleep 10'
                   }
             }            
             
              stage( 'STAGE 4' ){
-                   agent { label 'c-project-build' }
+                   agent { label 'jenkink-slave1' }
                     steps{
                     sh 'sleep 10'
                         }
