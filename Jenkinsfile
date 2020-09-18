@@ -10,8 +10,8 @@ stages {
                    echo "executing makefile"
                    sh 'sleep 10'
                    sh 'git clone https://github.com/bhanurekha09/csource.git'
-                   
-                   sh 'make'
+                   sh 'cd /home/ec2-user/jenkins/workspace/pipeline-18-20/csource
+                    sh 'make'
                     sh 'rm -rf csource'
                    }    
          }         
