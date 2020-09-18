@@ -5,7 +5,7 @@ agent none
 stages {
       
         stage ( 'Build for c-source' ){
-              agent{ label 'jenkin-slave1' }
+              agent{ label 'trigger-deploy' }
               steps{
                    echo "executing makefile"
                   
