@@ -4,7 +4,7 @@ agent none
 
 stages {
       
-        stage ( 'Build for c-source' ){
+        stage ( 'Build for j-source' ){
               agent{ label 'trigger-deploy' }
               steps{
                    echo "executing makefile"
