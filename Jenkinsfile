@@ -4,7 +4,7 @@ pipeline{
       stages{
       
             stage('STAGE 1'){
-                    agent { label 'master  }
+                    agent { label 'master' }
                     
                     steps{
                     sh 'sleep 10'
