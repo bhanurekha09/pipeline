@@ -6,6 +6,11 @@ stages {
       
         stage ( 'Build for j-source' ){
               agent{ label 'master' }
+              tools { 
+                 maven 'Maven 3.6.3' 
+                 jdk 'jdk8' 
+    }
+              
               steps{
                    echo "executing makefile"
                   
