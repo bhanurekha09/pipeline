@@ -26,6 +26,20 @@ pipeline{
                   }
             }            
             
+             stage( 'STAGE 4' ){
+                   agent { label1 'c-project-build' }
+                    steps{
+                    sh 'sleep 10'
+                        }
+                  }
+                  
+                  stage( 'STAGE 5' ){
+                        agent { label1 'c-on-slave2' }
+                        steps{
+                              sh 'sleep 10'
+                        }
+                        
+                  }
             
             }             
            
