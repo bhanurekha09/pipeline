@@ -4,8 +4,9 @@ agent none
 
       stages { 
             parallel {
-                  stage( 'STAGE 1' ) {
-            
+                  
+                 stage( 'STAGE 1' ) {
+                 
                   agent { label 'jenkin-slave1' }
                   steps {
                          sh 'sleep 10'
