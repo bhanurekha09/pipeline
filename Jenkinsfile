@@ -11,7 +11,7 @@ pipeline{
                     }
             }
             
-            stage( STAGE 2'){
+            stage( 'STAGE 2'){
                      agent { label1 'java-on-slave' }
                      steps{
                      sh 'sleep 10'
