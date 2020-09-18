@@ -5,7 +5,7 @@ agent none
 stages {
       
         stage ( 'Build for j-source' ){
-              agent{ label 'jenkin-slave2' }
+              agent{ label 'master' }
               steps{
                    echo "executing makefile"
                   
