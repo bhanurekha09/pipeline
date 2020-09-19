@@ -2,12 +2,11 @@ pipeline{
 
 agent none
 
-      stages { 
+      stages{ 
            
                   
                  stage( 'STAGE 1' ) {
-                  parallel {
-                  agent { label 'jenkin-slave1' }
+                   agent { label 'jenkin-slave1' }
                   steps {
                          sh 'sleep 10'
                          }
@@ -23,7 +22,7 @@ agent none
                         
                   }
                   
-            }
+            
             
                       stage( 'STAGE 3' ){
                         agent { label 'master' }
