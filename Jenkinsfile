@@ -14,7 +14,7 @@ agent none
             
             
                   stage ( 'STAGE 2' ) {
-                        
+                        parallel {
                         agent { label 'trigger-deploy' }
                         steps {
                               sh 'sleep 10'
@@ -30,7 +30,7 @@ agent none
                               sh 'sleep 10'
                         }          
                   }
-                  
+                  }
                   
                   stage( 'STAGE 4'){
                         agent { label 'trigger-deploy' }
