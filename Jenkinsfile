@@ -6,7 +6,7 @@ agent none
            
                   
                  stage( 'STAGE 1' ) {
-                   agent { label 'jenkin-slave1' }
+                   agent { label 'master' }
                   steps {
                          sh 'sleep 10'
                          }
@@ -15,7 +15,7 @@ agent none
             
                   stage ( 'STAGE 2' ) {
                         
-                        agent { label 'jenkin-slave2' }
+                        agent { label 'trigger-deploy' }
                         steps {
                               sh 'sleep 10'
                         }
@@ -33,7 +33,7 @@ agent none
                   
                   
                   stage( 'STAGE 4'){
-                        agent { label 'jenkin-slave1' }
+                        agent { label 'trigger-deploy' }
                         steps {
                               sh 'sleep 10'
                         }
