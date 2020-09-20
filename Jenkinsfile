@@ -30,7 +30,7 @@ agent none
                       stage( 'STAGE 3' ){
                         agent { label 'master' }
                         steps {
-                              sh 'sleep 10'
+                              sh 'sleep 15'
                         }          
                   }
                   
